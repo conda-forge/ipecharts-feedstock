@@ -1,5 +1,5 @@
 {% set name = "ipecharts" %}
-{% set version = "1.0.5" %}
+{% set version = "1.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ipecharts-{{ version }}.tar.gz
-  sha256: 6fac77015b149ac417b661edddf1376665b15a86f49529da000c809a023f695e
+  sha256: 4dfab3b01ee918428324eedbaf9fe2b6746160d928149c885a0e1554081182f8
 
 build:
   noarch: python
