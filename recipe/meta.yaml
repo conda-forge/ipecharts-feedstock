@@ -12,13 +12,13 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
     - nodejs
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling >=1.5.0
     - jupyterlab >=4.0.0,<5
     - hatch-nodejs-version
@@ -29,7 +29,7 @@ requirements:
     - ruff
     - sphinx
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - ipywidgets >=8
 
 test:
@@ -39,6 +39,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/trungleduc/ipecharts
